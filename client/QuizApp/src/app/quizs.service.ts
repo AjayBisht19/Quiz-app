@@ -1,0 +1,31 @@
+import { Injectable } from '@angular/core';
+import { HttpClient } from "@angular/common/http";
+
+@Injectable({
+  providedIn: 'root'
+})
+export class QuizsService {
+  url="http://localhost:8080";
+  constructor(private http:HttpClient) { }
+  getquizs(){
+    return this.http.get(this.url+'/admin/dashboard');
+  }
+  getquestions(id:any){
+    return this.http.get(this.url+`/admin/dashboard/${id}`);
+  }
+
+  saveQuiz(quiz: any){
+    console.log("request sent");
+    return this.http.post(this.url+'/admin/addQuiz',quiz);
+  }
+
+  deleteQuiz(Id:any){
+    console.log("delete request "+Id);
+    console.log(this.url+`/admin/delete/${Id}`);
+    return this.http.delete(this.url+`/admin/delete/${Id}`);
+  }
+
+  addQuestion(id:any,question:any){
+    return this.http.post(this.url+`/admin/addQuestion/${id}`,question);
+  }
+}
