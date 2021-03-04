@@ -28,4 +28,9 @@ export class QuizsService {
   addQuestion(id:any,question:any){
     return this.http.post(this.url+`/admin/addQuestion/${id}`,question);
   }
+
+  setNoQ(id:any,noq:any){
+    console.log("cant send")
+    return this.http.get(this.url+`/admin/addQuizno/${id}/${noq}`)
+  }
 }

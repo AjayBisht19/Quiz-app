@@ -82,11 +82,7 @@ public class Quiz {
 		this.questions = questions;
 	}
 
-	@Override
-	public String toString() {
-		return "Quiz [Id=" + Id + ", marks=" + marks + ", noOfQuestions=" + noOfQuestions + ", questions=" + questions
-				+ "]";
-	}
+	
 	
 	
 	

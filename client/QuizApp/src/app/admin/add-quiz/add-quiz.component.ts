@@ -40,7 +40,7 @@ export class AddQuizComponent implements OnInit {
   }
   
   addQuiz() {
-
+      // this.noQ=0;
     this.postService.saveQuiz(this.addQz.value).subscribe((quiz) => {
       var element = <HTMLInputElement>document.getElementById("addQuiz");
       element.classList.add("d-none");
@@ -54,12 +54,20 @@ export class AddQuizComponent implements OnInit {
   };
 
   addQuestion(){
-    // this.postService.addQuestion();
-    
-    console.log("zz0");
+    // this.noQ++;
+    console.log(this.noQ);
     console.log(this.addQu.value);
     return this.postService.addQuestion(this.qId,this.addQu.value).subscribe((que)=>{
       console.log(que);
+    
     })
+    
   }
+
+  // setNoQ(){
+  //   return this.postService.setNoQ(this.qId,this.noQ).subscribe((result)=>{
+  //     console.log(result);
+  //     console.log("success till here");
+  //   })
+  // }
 }

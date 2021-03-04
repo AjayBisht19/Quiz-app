@@ -5,11 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from "@angular/common/http";
 import { ReactiveFormsModule } from "@angular/forms";
+import { UserpageComponent } from './userpage/userpage.component';
+import { QuizAttemptComponent } from './quiz-attempt/quiz-attempt.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    UserpageComponent,
+    QuizAttemptComponent
   ],
   imports: [
     BrowserModule,
