@@ -11,7 +11,7 @@ export class AppComponent {
   title = 'QuizApp';
   admin:boolean;
   ngOnInit(): void {
-    
+    this.admin=true;
   }
   constructor(private QuizsService:QuizsService,private router: Router) { }
   logout(){
