@@ -1,3 +1,3 @@
 # QuizApp
-# Quiz-app
-# Quiz-app
+admin login id - admin@gmail.com   
+admin login password - admin
