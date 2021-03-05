@@ -13,12 +13,17 @@ export class QuizAttemptComponent implements OnInit {
   constructor(private quizService:QuizsService,private router:ActivatedRoute) { }
   questions:{}
   marks:number;
+  len:any;
+ 
   alert:boolean=false;
   show:boolean=false;
   ngOnInit(): void {
+    
     this.quizService.getquestions(this.router.snapshot.params.id).subscribe((qs)=>{
       this.questions=qs;
       console.log(qs)
+      this.len= Object.keys(this.questions).length;
+      
     });    
       this.marks=0;
   }

@@ -7,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-
+  
   constructor(private quizService:QuizsService) { }
   collection:{};
   ngOnInit(): void {
+    
     this.quizService.getquizs().subscribe((quizs)=>{
         console.log(quizs);
         this.collection=quizs;

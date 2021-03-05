@@ -10,7 +10,9 @@ export class QuizComponent implements OnInit {
 
   constructor(private quizService:QuizsService,private router:ActivatedRoute) { }
   questions:{};
+  
   ngOnInit(): void {
+    
     this.quizService.getquestions(this.router.snapshot.params.id).subscribe((qs)=>{
       this.questions=qs;
     })

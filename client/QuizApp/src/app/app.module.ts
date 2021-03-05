@@ -7,13 +7,15 @@ import { HttpClientModule } from "@angular/common/http";
 import { ReactiveFormsModule } from "@angular/forms";
 import { UserpageComponent } from './userpage/userpage.component';
 import { QuizAttemptComponent } from './quiz-attempt/quiz-attempt.component';
+import { AdminLoginComponent } from './admin-login/admin-login.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     UserpageComponent,
-    QuizAttemptComponent
+    QuizAttemptComponent,
+    AdminLoginComponent
   ],
   imports: [
     BrowserModule,

@@ -32,12 +32,11 @@
           </label>
         </div>
         <br>
-        <h4 *ngIf="show" class="text-primary">Correct answer {{q.correctAnswer}}</h4>
-        <input type="hidden" formControlName="correct" [ngModel]="q.correctAnswer" name="correct">
-        <button type="submit" class="float-end btn btn-primary" *ngIf="!show">Save</button>
+        <h4 *ngIf="show" class="text-primary">Correct answer is {{q.correctAnswer}}</h4>
+        <input type="hidden" [ngModel]='q.correctAnswer' formControlName="correct"  name="correct">
+        <button type="submit" class="float-end btn btn-primary"  *ngIf="!show">Save</button>
       </form>
     </div>
-
   </div>
 
   <button class="btn btn-danger float-end" (click)="submit()" *ngIf="!show"> Submit Quiz</button>
@@ -48,6 +47,6 @@
 
 <div *ngIf="alert" class="container">
   <h1 class="text-center text-danger"> Result </h1>
-  <h3>You got {{this.marks}} marks</h3><br>
+  <h3>You got {{this.marks}} marks out of {{this.len}}</h3><br>
   <button class="btn btn-danger" (click)="review()"> Review</button>
 </div>

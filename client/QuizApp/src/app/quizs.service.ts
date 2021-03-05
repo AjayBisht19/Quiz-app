@@ -1,11 +1,14 @@
+import { AppComponent } from './app.component';
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class QuizsService {
   url="http://localhost:8080";
+  
   constructor(private http:HttpClient) { }
   getquizs(){
     return this.http.get(this.url+'/admin/dashboard');
@@ -33,4 +36,7 @@ export class QuizsService {
     console.log("cant send")
     return this.http.get(this.url+`/admin/addQuizno/${id}/${noq}`)
   }
+ 
+  
+  
 }

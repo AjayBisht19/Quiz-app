@@ -14,6 +14,7 @@ export class AddQuizComponent implements OnInit {
   noQ:number;
   quizName:String;
   alert:boolean=false;
+ 
 
   constructor(private postService: QuizsService) { }
   addQz = new FormGroup({
@@ -32,6 +33,7 @@ export class AddQuizComponent implements OnInit {
 
 
   ngOnInit(): void {
+  
   }
 
 
